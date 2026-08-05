@@ -1,7 +1,7 @@
 #pragma once
 #include "Aircraft.h"
 
-class AplhaAricraft : public Aircraft{
+class AlphaAircraft : public Aircraft{
     public:
         std::string companyName() const override {return "Alpha Company";}
         double cruiseSpeedMph() const override {return 120;}

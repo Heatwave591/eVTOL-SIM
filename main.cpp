@@ -1,15 +1,13 @@
 #include <iostream>
-#include "Aircraft.h"
+#include "AircraftModels.h"
 
 int main(){
-    Aircraft alpha{"Alpha Company", 120, 320, 0.60, 1.6, 4, 0.25};
+    Aircraft* alpha = new AlphaAircraft();
 
-    double flightDurationHours = alpha.batteryCapacityKwh() / (alpha.energyUseKwhPerMile() * alpha.cruiseSpeedMph());
-    double flightDistanceMiles = alpha.cruiseSpeedMph() * flightDurationHours;
+    std::cout << alpha->companyName() << ": "
+              << alpha->flightDurationHours() << " hr, "
+              << alpha->flightDistanceMiles() << " mi\n";
 
-    std::cout << alpha.companyName() << ": "
-              << flightDurationHours << " hr, "
-              << flightDistanceMiles << " mi\n";
-
+    delete alpha;
     return 0;
 }
