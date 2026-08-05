@@ -1,15 +1,55 @@
 #pragma once
 #include <string>
+#include <utility>
 
 
-struct Aircraft{
-    std::string companyName;
-    double cruiseSpeedMph;
-    double batteryCapacityKwh;
-    double timeToChargeHours;
-    double energyUseKwhPerMile;
-    int passengerCount;
-    double faultProbablityPerHour;
+class Aircraft{
+    public:
+    Aircraft(std::string companyName, 
+            double cruiseSpeedMph,
+            double batteryCapacityKwh,
+            double timeToChargeHours,
+            double energyUseKwhPerMile,
+            int passengerCount,
+            double faultProbabilityPerHour)
+
+    : companyName_(std::move(companyName)),
+      cruiseSpeedMph_(cruiseSpeedMph),
+      batteryCapacityKwh_(batteryCapacityKwh),
+      timeToChargeHours_(timeToChargeHours),
+      energyUseKwhPerMile_(energyUseKwhPerMile), 
+      passengerCount_(passengerCount), 
+      faultProbabilityPerHour_(faultProbabilityPerHour) {}
+
+      std::string companyName() const { return companyName_; }
+    double cruiseSpeedMph() const { return cruiseSpeedMph_; }
+    double batteryCapacityKwh() const { return batteryCapacityKwh_; }
+    double timeToChargeHours() const { return timeToChargeHours_; }
+    double energyUseKwhPerMile() const { return energyUseKwhPerMile_; }
+    int passengerCount() const { return passengerCount_; }
+    double faultProbabilityPerHour() const { return faultProbabilityPerHour_; }
+
+private:
+    std::string companyName_;
+    double cruiseSpeedMph_;
+    double batteryCapacityKwh_;
+    double timeToChargeHours_;
+    double energyUseKwhPerMile_;
+    int passengerCount_;
+    double faultProbabilityPerHour_;
 };
+
+
+
+//
+//struct Aircraft{
+//    std::string companyName;
+//    double cruiseSpeedMph;
+//    double batteryCapacityKwh;
+//    double timeToChargeHours;
+//    double energyUseKwhPerMile;
+//    int passengerCount;
+//    double faultProbablityPerHour;
+//};
 
 
