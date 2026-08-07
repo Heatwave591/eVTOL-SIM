@@ -1,5 +1,7 @@
 #pragma once
 #include "Aircraft.h"
+using namespace std;
+
 
 class AlphaAircraft : public Aircraft{
     public:
@@ -56,3 +58,4 @@ public:
     int passengerCount() const override { return 2; }
     double faultProbabilityPerHour() const override { return 0.61; }
 };
+

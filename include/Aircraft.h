@@ -1,12 +1,14 @@
 #pragma once
 #include <string>
 #include <utility>
+using namespace std;
+
 
 class Aircraft{
     public:
         virtual ~Aircraft() = default;
 
-        virtual std::string companyName() const = 0;
+        virtual string companyName() const = 0;
         virtual double cruiseSpeedMph() const = 0;
         virtual double batteryCapacityKwh() const = 0;
         virtual double timeToChargeHours() const = 0;

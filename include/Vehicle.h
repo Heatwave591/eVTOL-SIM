@@ -1,6 +1,7 @@
 #pragma once
 #include <memory>
 #include "Aircraft.h"
+using namespace std;
 
 
 enum class VehicleState {Flying, WaitingForCharger, Charging};
@@ -16,7 +17,7 @@ struct VehicleStats{
 
 class Vehicle{
     public:
-        Vehicle(int id, std::unique_ptr<Aircraft> aircraft) : id_(id), aircraft_(std::move(aircraft)) {}
+        Vehicle(int id, unique_ptr<Aircraft> aircraft) : id_(id), aircraft_(move(aircraft)) {}
 
         int id() const { return id_; }
         const Aircraft& aircraft() const { return *aircraft_; }
@@ -40,7 +41,7 @@ class Vehicle{
 
     private:
         int id_;
-        std::unique_ptr<Aircraft> aircraft_;
+        unique_ptr<Aircraft> aircraft_;
         VehicleState state_ = VehicleState::Flying;
         VehicleStats stats_;
 };
