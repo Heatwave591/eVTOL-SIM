@@ -3,7 +3,7 @@
 #include "Aircraft.h"
 
 
-enum class VehicleState {ying, WaitingForCharger, Charging};
+enum class VehicleState {Flying, WaitingForCharger, Charging};
 
 struct VehicleStats{
     int flightCount = 0;
@@ -41,6 +41,6 @@ class Vehicle{
     private:
         int id_;
         std::unique_ptr<Aircraft> aircraft_;
-        VehicleState state_ = VehicleState::FLying;
+        VehicleState state_ = VehicleState::Flying;
         VehicleStats stats_;
 };
