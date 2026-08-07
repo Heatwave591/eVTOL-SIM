@@ -9,15 +9,20 @@ int main(){
     // std::unique_ptr<Aircraft> alpha = std::make_unique<AlphaAircraft>();
 
 
-    // std::cout << alpha->companyName() << ": "
+    // cout << alpha->companyName() << ": "
     //           << alpha->flightDurationHours() << " hr, "
     //           << alpha->flightDistanceMiles() << " mi\n";
 
-    Vehicle v(0, AircraftFactory::create(AircraftType::Alpha));
+    // Vehicle v(0, AircraftFactory::create(AircraftType::Alpha));
 
-    cout << v.aircraft().companyName() << ": "
-        << v.aircraft().flightDurationHours() << "hrs, "
-        << v.aircraft().flightDistanceMiles() << "mi\n";
+    AircraftType type = AircraftFactory::randomType();
+    Vehicle v(0, AircraftFactory::create(type));
+
+        cout << v.aircraft().companyName() << ": "
+             << v.aircraft().flightDurationHours() << "hrs, "
+             << v.aircraft().flightDistanceMiles() << "mi\n";
 
     return 0;
+
+
 }

@@ -2,6 +2,9 @@
 #include "AircraftModels.h"
 #include <stdexcept>
 #include <memory>
+#include <cstdlib>
+#include <ctime>
+
 using namespace std;
 
 
@@ -20,5 +23,16 @@ public:
         }
 
         throw std::invalid_argument("Unknown aircraft type");
+    }
+
+    static AircraftType randomType(){
+        static bool seeded = false;
+        if(!seeded){
+            srand(static_cast<unsigned>(time(nullptr)));
+            seeded = true;
+        }
+
+        int count = static_cast<int>(AircraftType::Count);
+        return static_cast<AircraftType>(rand() % count);
     }
 };
