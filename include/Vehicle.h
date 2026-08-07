@@ -3,7 +3,7 @@
 #include "Aircraft.h"
 
 
-enum class VehicleState {FLying, WaitingForCharger, Charging};
+enum class VehicleState {ying, WaitingForCharger, Charging};
 
 struct VehicleStats{
     int flightCount = 0;
@@ -25,8 +25,9 @@ class Vehicle{
         const VehicleStats& stats() const { return stats_; }
 
         void recordFlightCompleted(double durationHours, double distanceMiles){
-            stats_.chargeCount++;
-            stats_.totalChargeHours += durationHours;
+            stats_.flightCount++;
+            stats_.totalFlightHours += durationHours;
+            stats_.totalDistanceMiles += distanceMiles;
         }
 
         void recordChargeCompleted(double durationHours) {
