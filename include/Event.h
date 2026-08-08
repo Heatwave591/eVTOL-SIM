@@ -9,5 +9,5 @@ struct Event{
 };
 
 struct EventComparator{
-    bool operator()(const Event& a, const Event& b) const { return a.time < b.time; };
+    bool operator()(const Event& a, const Event& b) const { return a.time > b.time; };
 };

@@ -5,4 +5,5 @@ sim
 .claude/
 .vscode/
 tests/run_tests
+tests/run_event_tests
 
