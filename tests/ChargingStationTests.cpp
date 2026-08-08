@@ -67,3 +67,23 @@ void testReleaseWithNoWaiters(){
 
     check(!released, "empty queue returns null");
 }
+
+
+int main(){
+    
+    testGrantsUpToCapacityThenQueues();
+    testNeverExceedsCapacity();
+    testReleaseToNextVehicle();
+    testReleaseWithNoWaiters();
+
+    if(failures == 0){
+        cout << "\nAll tests Passed\n";
+    }
+
+    else{
+        cout << "\n" << failures << "tests failed\n";
+    }
+
+    return failures;
+    
+}
