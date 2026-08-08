@@ -4,4 +4,5 @@ build/
 sim
 .claude/
 .vscode/
+tests/run_tests
 

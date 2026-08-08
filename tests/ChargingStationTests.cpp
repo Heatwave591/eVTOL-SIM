@@ -81,7 +81,7 @@ int main(){
     }
 
     else{
-        cout << "\n" << failures << "tests failed\n";
+        cout << "\n" << failures << " tests failed\n";
     }
 
     return failures;
