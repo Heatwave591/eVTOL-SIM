@@ -4,6 +4,7 @@
 #include <memory>
 #include <cstdlib>
 #include <ctime>
+#include "IRandomProvider.h"
 
 using namespace std;
 
@@ -25,14 +26,9 @@ public:
         throw std::invalid_argument("Unknown aircraft type");
     }
 
-    static AircraftType randomType(){
-        static bool seeded = false;
-        if(!seeded){
-            srand(static_cast<unsigned>(time(nullptr)));
-            seeded = true;
-        }
+    static AircraftType randomType(IRandomProvider& rng){
 
         int count = static_cast<int>(AircraftType::Count);
-        return static_cast<AircraftType>(rand() % count);
+        return static_cast<AircraftType>(rng.nextInt(0, count));
     }
 };
