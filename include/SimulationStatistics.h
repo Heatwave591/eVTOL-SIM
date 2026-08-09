@@ -10,7 +10,7 @@ struct AggregatedStats{
 
     string CompanyName;
     int VehicleCount = 0;
-    double avgFlighTimeHours = 0;
+    double avgFlightTimeHours = 0;
     double avgDistanceMiles = 0;
     double avgChargeTimeHours = 0;
     int totalFaults = 0;
