@@ -6,4 +6,5 @@ sim
 .vscode/
 tests/run_tests
 tests/run_event_tests
+tests/sim_tests
 
