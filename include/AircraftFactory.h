@@ -29,6 +29,6 @@ public:
     static AircraftType randomType(IRandomProvider& rng){
 
         int count = static_cast<int>(AircraftType::Count);
-        return static_cast<AircraftType>(rng.nextInt(0, count));
+        return static_cast<AircraftType>(rng.nextInt(0, count - 1));
     }
 };
