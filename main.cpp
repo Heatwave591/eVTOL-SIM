@@ -3,6 +3,8 @@
 #include "Vehicle.h"
 #include <memory>
 #include "AircraftFactory.h"
+#include "RandomProvider.h"
+
 using namespace std;
 
 int main(){
@@ -15,7 +17,9 @@ int main(){
 
     // Vehicle v(0, AircraftFactory::create(AircraftType::Alpha));
     
-    AircraftType type = AircraftFactory::randomType();
+    RandomProvider rng;
+
+    AircraftType type = AircraftFactory::randomType(rng);
     Vehicle v(0, AircraftFactory::create(type));
 
         cout << v.aircraft().companyName() << ": "
