@@ -62,7 +62,7 @@ private:
             eventQueue_.push({currentTime_ + next.aircraft().timeToChargeHours(),
                                EventType::ChargeComplete, next.id()});
         }
-        scheduleFlightComplete(v, 0.0);
+        scheduleFlightComplete(v, currentTime_);
     }
 
     vector<unique_ptr<Vehicle>> vehicles_;
