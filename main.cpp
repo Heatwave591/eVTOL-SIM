@@ -14,9 +14,7 @@ int main(){
     //           << alpha->flightDistanceMiles() << " mi\n";
 
     // Vehicle v(0, AircraftFactory::create(AircraftType::Alpha));
-
-
-
+    
     AircraftType type = AircraftFactory::randomType();
     Vehicle v(0, AircraftFactory::create(type));
 
