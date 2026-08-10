@@ -27,16 +27,18 @@ A discrete-event simulation of 20 eVTOL aircraft, across 5 companies, sharing 3 
 ```bash
 g++ -std=c++17 -Wall -Wextra -Iinclude main.cpp -o sim
 ./sim
+```
 
 ## Running Tests
 Each test file is a standalone executable with its own main(), built the same way as the simulation itself:
 
+```bash
 g++ -std=c++17 -Wall -Wextra -Iinclude tests/ChargingStationTests.cpp -o tests/run_tests && ./tests/run_tests
 g++ -std=c++17 -Wall -Wextra -Iinclude tests/EventTests.cpp -o tests/run_event_tests && ./tests/run_event_tests
 g++ -std=c++17 -Wall -Wextra -Iinclude tests/AircraftFactoryTests.cpp -o tests/aircraft_factory_tests && ./tests/aircraft_factory_tests
 g++ -std=c++17 -Wall -Wextra -Iinclude tests/SimulationStatisticsTests.cpp -o tests/stats_tests && ./tests/stats_tests
-
 ```
+
 
 ## Assumptions
 - All six spec constants per company are taken verbatim from the assignment's vehicle spec table.
