@@ -11,8 +11,8 @@ public:
     size_t waitingCount() const { return waitingQueue_.size(); }
     int availableChargers() const { return availableChargers_; }
 
-    bool requestCharger(int vehicleId){
-        if(availableChargers_ > 0){
+    bool requestCharger(int vehicleId){     // This is a FIFO buffer... 
+        if(availableChargers_ > 0){         // Using a charge level based priority is more realistic
             --availableChargers_;
             return true;
         }

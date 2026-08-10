@@ -1,7 +1,12 @@
 #pragma once
 #include "Aircraft.h"
+
 using namespace std;
 
+// Constants here are hardcoded for each subclass.
+// This will mostly be changed to make it in such a way that 
+// the information will be loaded from a config file.
+// This way, no need to recompile everytime a spec change is done.
 
 class AlphaAircraft : public Aircraft{
     public:

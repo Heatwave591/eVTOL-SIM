@@ -20,7 +20,7 @@ public:
             case AircraftType::Charlie : return make_unique<CharlieAircraft>();
             case AircraftType::Delta : return make_unique<DeltaAircraft>();
             case AircraftType::Echo : return make_unique<EchoAircraft>();
-            case AircraftType::Count : break;
+            case AircraftType::Count : break;                                       // Count is just there to handle warning and return no. of aircraft
         }
 
         throw std::invalid_argument("Unknown aircraft type");

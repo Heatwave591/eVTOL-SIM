@@ -37,11 +37,12 @@ private:
                            EventType::FlightComplete, v.id()});
     }
 
-    void handleFlightComplete(Vehicle& v) {
-        const Aircraft& a = v.aircraft();
-        double duration = a.flightDurationHours();
-        v.recordFlightCompleted(duration, a.flightDistanceMiles());
+    void handleFlightComplete(Vehicle& v) {                                                 // Faults only logged. 
 
+        const Aircraft& a = v.aircraft();                                                   // Implementing a bunch of methods to  
+        double duration = a.flightDurationHours();                                          // ground or scheduling maintainence is
+        v.recordFlightCompleted(duration, a.flightDistanceMiles());                         // more realistic if there are repeated
+                                                                                            // faults noticed/
         int faults = rng_.nextPoisson(a.faultProbabilityPerHour() * duration);
         v.recordFaults(faults);
 

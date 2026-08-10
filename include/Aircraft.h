@@ -16,6 +16,10 @@ class Aircraft{
         virtual int passengerCount() const = 0;
         virtual double faultProbabilityPerHour() const = 0;
 
+        // No need of virtual here because this is same in every class. 
+        // Calculating this is done with the virtual getters from the top.
+        // So, duplicates won't be made for each class.
+        
         double flightDurationHours() const {
         return batteryCapacityKwh() / (energyUseKwhPerMile() * cruiseSpeedMph());
     }

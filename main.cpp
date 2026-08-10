@@ -34,8 +34,8 @@ int main(){
 
     auto report = SimulationStatistics::aggregateByCompany(sim.vehicles());
 
-    for(const auto& r : report){
-        cout << r.CompanyName << " ; "
+    for(const auto& r : report){                                        // Make this more readable
+        cout << r.CompanyName << " ; "                                  // Format the table for clarity        
              << "Count: " << r.VehicleCount << " ; "
              << "AvgFlt(hr): " << r.avgFlightTimeHours << " ; "
              << "AvgDist(mi): " << r.avgDistanceMiles << " ; "

@@ -17,10 +17,10 @@ struct VehicleStats{
 
 class Vehicle{
     public:
-        Vehicle(int id, unique_ptr<Aircraft> aircraft) : id_(id), aircraft_(move(aircraft)) {}
-
-        int id() const { return id_; }
-        const Aircraft& aircraft() const { return *aircraft_; }
+        Vehicle(int id, unique_ptr<Aircraft> aircraft) : id_(id), aircraft_(move(aircraft)) {}  // turns out, we need to use move() here
+                                                                                                // Bcoz. aircraft is a unique_ptr.
+        int id() const { return id_; }                                                          // Normal assignment can't be used
+        const Aircraft& aircraft() const { return *aircraft_; }                                 // Bcoz. the constructor is delete.
         VehicleState state() const { return state_; }
         void setState(VehicleState s) { state_ = s; }
         const VehicleStats& stats() const { return stats_; }

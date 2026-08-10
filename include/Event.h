@@ -8,6 +8,7 @@ struct Event{
     int VehicleId;
 };
 
+// a must be greate than b. written details in EventTests.cpp
 struct EventComparator{
     bool operator()(const Event& a, const Event& b) const { return a.time > b.time; };
 };

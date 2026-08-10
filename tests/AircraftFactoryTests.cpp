@@ -5,6 +5,9 @@
 
 using namespace std;
 
+// All tests are rather straight forward tests that were helpful to catch bugs and corner cases.
+// Using something like Catch2 with CMake should be able to provide better insight on the codebase.
+
 int failures = 0;
 
 void check(bool condition, const string& testName) {
