@@ -42,10 +42,11 @@ g++ -std=c++17 -Wall -Wextra -Iinclude tests/SimulationStatisticsTests.cpp -o te
 
 ## Assumptions
 - All six spec constants per company are taken verbatim from the assignment's vehicle spec table.
-- Charger assignment is FIFO — not specified in the prompt, chosen as the simplest fair policy.
-- Faults are modeled as a Poisson process, with rate = faultProbabilityPerHour × flightDurationHours per completed flight. Faults are logged but do not ground the vehicle or add downtime.
-- A flight or charge still in progress at the 3-hour cutoff is not counted in the final statistics — only fully completed segments count.
-- Each of the 20 vehicles independently picks one of the 5 company types at random (uniform distribution), rather than a fixed partition — satisfying "a random number of each type, totaling 20."
+- Charger assignment is FIFO.
+- Faults are modeled as a Poisson process, with rate = faultProbabilityPerHour × flightDurationHours per completed flight.
+- Faults are logged but do not ground the vehicle or add downtime.
+- A flight or charge still in progress at the 3-hour cutoff is not counted in the final statistics.
+- Each of the 20 vehicles independently picks one of the 5 company types at random (uniform distribution).
 
 ## Sample Output
 ```bash
