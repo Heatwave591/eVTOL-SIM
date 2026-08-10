@@ -48,8 +48,10 @@ g++ -std=c++17 -Wall -Wextra -Iinclude tests/SimulationStatisticsTests.cpp -o te
 - Each of the 20 vehicles independently picks one of the 5 company types at random (uniform distribution), rather than a fixed partition — satisfying "a random number of each type, totaling 20."
 
 ## Sample Output
+```bash
 Alpha Company ; Count: 8 ; AvgFlt(hr): 1.66667 ; AvgDist(mi): 200 ; AvgChg(hr): 0.6 ; Faults: 1 ; PaxMiles: 6400
 Bravo Company ; Count: 2 ; AvgFlt(hr): 0.666667 ; AvgDist(mi): 66.6667 ; AvgChg(hr): 0.2 ; Faults: 1 ; PaxMiles: 1666.67
 Charlie Company ; Count: 2 ; AvgFlt(hr): 0.625 ; AvgDist(mi): 100 ; AvgChg(hr): 0.8 ; Faults: 0 ; PaxMiles: 1200
 Delta Company ; Count: 5 ; AvgFlt(hr): 1.66667 ; AvgDist(mi): 150 ; AvgChg(hr): 0.62 ; Faults: 3 ; PaxMiles: 1500
 Echo Company ; Count: 3 ; AvgFlt(hr): 0.862069 ; AvgDist(mi): 25.8621 ; AvgChg(hr): 0.3 ; Faults: 5 ; PaxMiles: 310.345
+```
