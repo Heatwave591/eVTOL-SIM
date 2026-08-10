@@ -8,4 +8,5 @@ tests/run_tests
 tests/run_event_tests
 tests/sim_test
 tests/aircraft_factory_tests
+tests/stats_tests
 
