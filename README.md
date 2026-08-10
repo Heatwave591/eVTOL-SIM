@@ -36,6 +36,8 @@ g++ -std=c++17 -Wall -Wextra -Iinclude tests/EventTests.cpp -o tests/run_event_t
 g++ -std=c++17 -Wall -Wextra -Iinclude tests/AircraftFactoryTests.cpp -o tests/aircraft_factory_tests && ./tests/aircraft_factory_tests
 g++ -std=c++17 -Wall -Wextra -Iinclude tests/SimulationStatisticsTests.cpp -o tests/stats_tests && ./tests/stats_tests
 
+```
+
 ## Assumptions
 - All six spec constants per company are taken verbatim from the assignment's vehicle spec table.
 - Charger assignment is FIFO — not specified in the prompt, chosen as the simplest fair policy.
